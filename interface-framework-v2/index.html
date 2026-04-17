@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interface Framework v2 - Universal OSRS Shell</title>
+    <meta
+      name="description"
+      content="Universal OSRS-style interface runtime for Perchance generators with adapters for chat, RPG, quiz, story, and image workflows."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/styles/osrs-universal.css" />
+
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/Mosberg/Mosberg.github.io/main/src/img/icon.webp"
+      type="image/x-icon"
+    />
+
+    <style>
+      .demo-shell {
+        max-width: 1140px;
+        margin: 0 auto;
+      }
+
+      .demo-toolbar {
+        margin: 0 auto 10px;
+        width: min(1120px, 100%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .demo-title {
+        color: #f4dfb5;
+        font-family: "Cinzel", "Cambria", serif;
+        letter-spacing: 0.02em;
+        font-size: clamp(1.1rem, 2vw, 1.45rem);
+      }
+
+      .demo-title span {
+        color: #ceab75;
+      }
+
+      .demo-mode-buttons {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+
+      .demo-mode-buttons button {
+        border: 1px solid #8a6738;
+        background: linear-gradient(180deg, #4f3a24, #2e2114);
+        color: #f2dfba;
+        font-family: "VT323", monospace;
+        font-size: 1rem;
+        padding: 4px 9px;
+        cursor: pointer;
+      }
+
+      .demo-mode-buttons button:hover {
+        filter: brightness(1.09);
+      }
+
+      .demo-note {
+        color: #d7c29d;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-shell">
+      <header class="demo-toolbar" aria-label="Demo controls">
+        <div class="demo-title">
+          Interface Framework v2 <span>mode:</span>
+          <strong id="ifw2-demo-mode">chat</strong>
+        </div>
+
+        <div
+          class="demo-mode-buttons"
+          role="group"
+          aria-label="Demo mode selector"
+        >
+          <button type="button" data-demo-mode="chat">Chat</button>
+          <button type="button" data-demo-mode="rpg">RPG</button>
+          <button type="button" data-demo-mode="quiz">Quiz</button>
+          <button type="button" data-demo-mode="image">Image</button>
+        </div>
+
+        <div class="demo-note">
+          This demo auto-rotates every 18s to show universal payload mapping.
+        </div>
+      </header>
+
+      <div id="ifw2-demo-root"></div>
+    </div>
+
+    <script src="./src/scripts/framework.js"></script>
+    <script src="./src/scripts/demo-bootstrap.js"></script>
+  </body>
+</html>

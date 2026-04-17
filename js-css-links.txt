@@ -1,0 +1,4 @@
+demo-bootstrap.js = https://user.uploads.dev/file/04b72742db848195a55bcea016ec3662.js
+presets.js = https://user.uploads.dev/file/27b727de65184eb0c12c6df62195627b.js
+framework.js = https://user.uploads.dev/file/f7653c07d4e072a6c03e962839aed9c7.js
+osrs-universal.css = https://user.uploads.dev/file/3cf9f6eb8bf4be1ce164a73349101e16.css

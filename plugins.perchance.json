@@ -132,6 +132,20 @@
       "url": "https://perchance.org/interface-framework",
       "url_edit": "https://perchance.org/interface-framework#edit",
       "snippet": "interfaceFramework = {import:interface-framework}"
+    },
+    {
+      "label": "interface-framework-v2",
+      "description": "Universal OSRS-style interface framework for Perchance generators with adapter hooks for chat, RPG, story, quiz, and visual workflows.",
+      "url": "https://perchance.org/interface-framework-v2",
+      "url_edit": "https://perchance.org/interface-framework-v2#edit",
+      "snippet": "interfaceFrameworkV2 = {import:interface-framework-v2}"
+    },
+    {
+      "label": "ai-character-chat-dependencies-v1",
+      "description": "Dependencies for AI character chat plugin.",
+      "url": "https://perchance.org/ai-character-chat-dependencies-v1",
+      "url_edit": "https://perchance.org/ai-character-chat-dependencies-v1#edit",
+      "snippet": "loadDependencies = {import:ai-character-chat-dependencies-v1}"
     }
   ]
 }

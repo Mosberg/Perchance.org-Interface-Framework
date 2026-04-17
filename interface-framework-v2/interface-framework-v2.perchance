@@ -1,0 +1,48 @@
+$meta
+  title = interface-framework-v2
+  description = Universal OSRS-style interface framework plugin for Perchance generators. Works with chat, character-chat, RPG, quiz, game, story, and text-to-image style payloads through one adapter-driven UI shell.
+  image = https://user.uploads.dev/file/8c7563d0ece7c9ed36c8a83f8361a7a7.webp
+  tags = interface, framework, osrs, runescape, plugin, universal, perchance, ai-chat, ai-character-chat, ai-rpg, game, quiz, story, text-to-image
+
+interfaceFrameworkV2
+  version = 2.0.0
+  theme = osrs-universal
+  scriptUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/scripts/framework.js
+  presetsScriptUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/scripts/adapters/presets.js
+  styleUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/styles/osrs-universal.css
+  docsUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/docs/PLUGIN-USAGE.md
+  demoUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/index.html
+  mountId = ifw2-root
+
+interfaceFrameworkV2Snippets
+  importSnippet = interfaceFrameworkV2 = {import:interface-framework-v2}
+  includeStyle = <link rel="stylesheet" href="[interfaceFrameworkV2.styleUrl]">
+  includeScript = <script src="[interfaceFrameworkV2.scriptUrl]"></script>
+  includePresetsScript = <script src="[interfaceFrameworkV2.presetsScriptUrl]"></script>
+  mountContainer = <div id="[interfaceFrameworkV2.mountId]"></div>
+  quickBootstrap = <script>window.ifw2 = window.createInterfaceFrameworkV2();</script>
+  quickPresetAiChat = <script>window.ifw2 = window.createInterfaceFrameworkV2({mount:"#[interfaceFrameworkV2.mountId]",adapter:window.interfaceFrameworkV2Presets.createPresetForLink("https://perchance.org/ai-chat")});</script>
+  quickPresetAiCharacterChat = <script>window.ifw2 = window.createInterfaceFrameworkV2({mount:"#[interfaceFrameworkV2.mountId]",adapter:window.interfaceFrameworkV2Presets.createPresetForLink("https://perchance.org/ai-character-chat",{seedSkeletonWhenMissing:true})});</script>
+  quickPresetAiRpg = <script>window.ifw2 = window.createInterfaceFrameworkV2({mount:"#[interfaceFrameworkV2.mountId]",adapter:window.interfaceFrameworkV2Presets.createPresetForLink("https://perchance.org/ai-rpg")});</script>
+
+interfaceFrameworkV2AdapterContract
+  modeField = mode
+  recommendedFields = title, subtitle, status, stats, messages, actions, cards, inventory, equipment, quests, skills, summary, images
+  chatArrayCandidates = messages, chat, history, feed, thread.messages
+  imageArrayCandidates = images, generatedImages, gallery, media
+  actionArrayCandidates = actions, commands, options, choices, buttons
+  syncCommandNote = Command parsing should remain synchronous for user input paths.
+
+interfaceFrameworkV2AiCharacterChatSupport
+  requiredRoot = data.data
+  requiredTables = characters, threads, messages, misc, summaries, memories, lore, textEmbeddingCache, textCompressionCache
+  helperMethod = window.ifw2.createAiCharacterChatSkeleton(seed)
+
+interfaceFrameworkV2GeneratorTargets
+  targets = ai-chat, ai-character-chat, ai-games, ai-rpg, ai-roguelike, ai-story-generator, ai-text-to-image-generator, interactive-rpg, geography-guesser, guess-the-city, guess-the-film, scratchgames, warrior-cats-interactive
+
+interfaceFrameworkV2ReadyPresets
+  aiChatGenerator = https://perchance.org/ai-chat
+  aiCharacterChatGenerator = https://perchance.org/ai-character-chat
+  aiRpgGenerator = https://perchance.org/ai-rpg
+  factoryApi = window.interfaceFrameworkV2Presets
