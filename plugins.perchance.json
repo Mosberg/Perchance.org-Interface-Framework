@@ -1,0 +1,137 @@
+{
+  "custom_plugins": [
+    {
+      "label": "t2i-framework-plugin-moss",
+      "description": "A plugin that generates HTML from a Perchance generator using the T2I framework.",
+      "url": "https://perchance.org/t2i-framework-plugin-moss",
+      "url_edit": "https://perchance.org/t2i-framework-plugin-moss#edit",
+      "snippet": "generateHTML = {import:t2i-framework-plugin-moss}"
+    },
+    {
+      "label": "t2i-framework-plugin-moss-v2",
+      "description": "Compatibility-first evolution of the T2I framework plugin with improved defaults and drop-in behavior.",
+      "url": "https://perchance.org/t2i-framework-plugin-moss-v2",
+      "url_edit": "https://perchance.org/t2i-framework-plugin-moss-v2#edit",
+      "snippet": "generateHTML = {import:t2i-framework-plugin-moss-v2}"
+    },
+    {
+      "label": "tabbed-comments-plugin-v1",
+      "description": "A plugin that adds tabbed comments to a webpage, allowing users to organize and view comments in different categories or sections.",
+      "url": "https://perchance.org/tabbed-comments-plugin-v1",
+      "url_edit": "https://perchance.org/tabbed-comments-plugin-v1#edit",
+      "snippet": "tabbedCommentsPlugin = {import:tabbed-comments-plugin-v1}"
+    },
+    {
+      "label": "create-media-gallery-plugin",
+      "description": "A plugin that allows users to create and manage media galleries, including images, videos, and other media types.",
+      "url": "https://perchance.org/create-media-gallery-plugin",
+      "url_edit": "https://perchance.org/create-media-gallery-plugin#edit",
+      "snippet": "createMediaGalleryPlugin = {import:create-media-gallery-plugin}"
+    },
+    {
+      "label": "prompt2-plugin-moss",
+      "description": "A plugin like `window.prompt`, except async, and with a lot more features.",
+      "url": "https://perchance.org/prompt2-plugin-moss",
+      "url_edit": "https://perchance.org/prompt2-plugin-moss#edit",
+      "snippet": "prompt2PluginMoss = {import:prompt2-plugin-moss}"
+    },
+    {
+      "label": "text2image-style-pack-default",
+      "description": "Default style pack for text2image-framework with prompts, negatives, and modifier groups.",
+      "url": "https://perchance.org/text2image-style-pack-default",
+      "url_edit": "https://perchance.org/text2image-style-pack-default#edit",
+      "snippet": "stylePackDefault = {import:text2image-style-pack-default}"
+    },
+    {
+      "label": "text2image-style-pack-anime",
+      "description": "Anime style pack for text2image-framework with anime-focused prompts and modifier groups.",
+      "url": "https://perchance.org/text2image-style-pack-anime",
+      "url_edit": "https://perchance.org/text2image-style-pack-anime#edit",
+      "snippet": "stylePackAnime = {import:text2image-style-pack-anime}"
+    },
+    {
+      "label": "huge-emoji-list",
+      "description": "A plugin that provides a comprehensive list of emojis, allowing users to easily access and use a wide variety of emojis in their projects or communications.",
+      "url": "https://perchance.org/huge-emoji-list",
+      "url_edit": "https://perchance.org/huge-emoji-list#edit",
+      "snippet": "customEmojis = {import:huge-emoji-list}"
+    },
+    {
+      "label": "pokemon",
+      "description": "Simply generates a random pokemon name at each click :)",
+      "url": "https://perchance.org/pokemon",
+      "url_edit": "https://perchance.org/pokemon#edit",
+      "snippet": "aiPokemonGeneratorMoss = {import:pokemon}"
+    },
+    {
+      "label": "animal",
+      "description": "A simple generator that gives you a random animal name.",
+      "url": "https://perchance.org/animal",
+      "url_edit": "https://perchance.org/animal#edit",
+      "snippet": "animalGeneratorMoss = {import:animal}"
+    },
+    {
+      "label": "text2image-framework",
+      "description": "A plugin that generates HTML from a Perchance generator using the T2I framework, with a focus on compatibility and ease of use.",
+      "url": "https://perchance.org/text2image-framework",
+      "url_edit": "https://perchance.org/text2image-framework#edit",
+      "snippet": "text2imageFrameworkPlugin = {import:text2image-framework}"
+    },
+    {
+      "label": "t2i-styles-moss-nsfw",
+      "description": "A style pack for text2image-framework with a focus on NSFW content, featuring prompts, negatives, and modifier groups tailored for generating adult-themed images.",
+      "url": "https://perchance.org/t2i-styles-moss-nsfw",
+      "url_edit": "https://perchance.org/t2i-styles-moss-nsfw#edit",
+      "snippet": "t2iStylesMossNsfwPlugin = {import:t2i-styles-moss-nsfw}"
+    },
+    {
+      "label": "combine-emojis-plugin",
+      "description": "A simple plugin to layer emojis on top of one another.",
+      "url": "https://perchance.org/combine-emojis-plugin",
+      "url_edit": "https://perchance.org/combine-emojis-plugin#edit",
+      "snippet": "combineEmojis = {import:combine-emojis-plugin}"
+    },
+    {
+      "label": "prompt2-plugin",
+      "description": "A plugin like `window.prompt`, except async, and with a lot more features.",
+      "url": "https://perchance.org/prompt2-plugin",
+      "url_edit": "https://perchance.org/prompt2-plugin#edit",
+      "snippet": "prompt2 = {import:prompt2-plugin}"
+    },
+    {
+      "label": "text-editor-plugin-v1",
+      "description": "A plugin that provides a text editor interface for editing content.",
+      "url": "https://perchance.org/text-editor-plugin-v1",
+      "url_edit": "https://perchance.org/text-editor-plugin-v1#edit",
+      "snippet": "createTextEditor = {import:text-editor-plugin-v1}"
+    },
+    {
+      "label": "t2i-styles-moss",
+      "description": "A style pack for text2image-framework with a focus on moss-themed content.",
+      "url": "https://perchance.org/t2i-styles-moss",
+      "url_edit": "https://perchance.org/t2i-styles-moss#edit",
+      "snippet": "t2iStyles = {import:t2i-styles-moss}"
+    },
+    {
+      "label": "ai-bot-framework-plugin-rpg-edition-v3",
+      "description": "A plugin for RPG edition V3 of the AI bot framework.",
+      "url": "https://perchance.org/ai-bot-framework-plugin-rpg-edition-v3",
+      "url_edit": "https://perchance.org/ai-bot-framework-plugin-rpg-edition-v3#edit",
+      "snippet": "rpgControlV3Base = {import:ai-bot-framework-plugin-rpg-edition-v3}"
+    },
+    {
+      "label": "ai-bot-framework-plugin-rpg-edition-v2",
+      "description": "A plugin for RPG edition V2 of the AI bot framework.",
+      "url": "https://perchance.org/ai-bot-framework-plugin-rpg-edition-v2",
+      "url_edit": "https://perchance.org/ai-bot-framework-plugin-rpg-edition-v2#edit",
+      "snippet": "rpgControlV2Base = {import:ai-bot-framework-plugin-rpg-edition-v2}"
+    },
+    {
+      "label": "interface-framework",
+      "description": "Comprehensive interface runtime framework plugin with adapters, workflows, jobs, canvas HUD, diagnostics, and command APIs.",
+      "url": "https://perchance.org/interface-framework",
+      "url_edit": "https://perchance.org/interface-framework#edit",
+      "snippet": "interfaceFramework = {import:interface-framework}"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+# Terms
+
+## 🎮 **A. Game Design Version**
+- mechanics
+- systems
+- stats
+- attributes
+- modifiers
+- abilities
+- cooldowns
+- timers
+- hitboxes
+- hurtboxes
+- physics bodies
+- AI routines
+- pathfinding
+- spawners
+- world states
+- quests
+- objectives
+- inventories
+- crafting trees
+- skill trees
+- perks
+- talents
+- effects
+- buffs
+- debuffs
+
+---
+
+## 🖥️ **B. UI / GUI / UX Version**
+- windows
+- panels
+- dialogs
+- overlays
+- HUD
+- menus
+- dropdowns
+- tabs
+- accordions
+- lists
+- grids
+- cards
+- widgets
+- buttons
+- toggles
+- sliders
+- checkboxes
+- radio buttons
+- inputs
+- fields
+- forms
+- tooltips
+- notifications
+- banners
+- progress bars
+- spinners
+- icons
+- animations
+- transitions
+
+---
+
+## 🤖 **C. Agent Architecture Version**
+- agents
+- sub‑agents
+- orchestrators
+- dispatchers
+- routers
+- controllers
+- managers
+- workers
+- tasks
+- jobs
+- pipelines
+- workflows
+- message queues
+- channels
+- events
+- triggers
+- handlers
+- callbacks
+- adapters
+- connectors
+- endpoints
+- schemas
+- manifests
+- contexts
+- sessions
+- state machines

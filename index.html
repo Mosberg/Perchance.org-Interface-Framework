@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSRS Interface V3 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="src/styles/classic.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://user.uploads.dev/file/8c7563d0ece7c9ed36c8a83f8361a7a7.webp"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="bg-veil" aria-hidden="true"></div>
+
+    <main class="client-stage" id="client-stage">
+      <div class="client-scale" id="client-scale">
+        <div class="client-shell" id="client-shell">
+          <section class="viewport-wrap frame" id="viewport-wrap">
+            <div class="viewport" id="viewport" aria-label="Game viewport">
+              <canvas
+                class="world-canvas"
+                id="world-canvas"
+                width="512"
+                height="334"
+                aria-hidden="true"
+              ></canvas>
+              <div class="horizon" aria-hidden="true"></div>
+              <div class="ground" aria-hidden="true"></div>
+              <span
+                class="actor actor-player"
+                id="actor-player"
+                aria-hidden="true"
+              ></span>
+              <span
+                class="actor actor-target"
+                id="actor-target"
+                aria-hidden="true"
+              ></span>
+              <span class="hint" id="hint-label">Walk here</span>
+            </div>
+
+            <div class="viewport-controls">
+              <button type="button" data-action="walk-here">Walk here</button>
+              <button type="button" data-action="attack-target">Attack</button>
+              <button type="button" data-action="examine-target">
+                Examine
+              </button>
+              <button type="button" data-action="toggle-choose-option">
+                Choose Option
+              </button>
+            </div>
+          </section>
+
+          <section class="chat-wrap frame">
+            <div class="chat-log" id="chat-log" aria-live="polite"></div>
+
+            <div
+              class="chat-filters"
+              id="chat-filters"
+              role="tablist"
+              aria-label="Chat filters"
+            >
+              <button type="button" class="active" data-channel="All">
+                All
+              </button>
+              <button type="button" data-channel="Game">Game</button>
+              <button type="button" data-channel="Public">Public</button>
+              <button type="button" data-channel="Private">Private</button>
+              <button type="button" data-channel="Clan">Clan</button>
+              <button type="button" data-channel="Trade">Trade</button>
+            </div>
+
+            <div class="chat-input-row">
+              <span class="channel-label" id="chat-channel-label">All</span>
+              <input
+                id="chat-input"
+                type="text"
+                maxlength="180"
+                placeholder="Press Enter to chat..."
+                autocomplete="off"
+              />
+              <button type="button" data-action="send-chat">Send</button>
+            </div>
+          </section>
+
+          <aside class="side-wrap frame">
+            <section class="minimap-wrap">
+              <button type="button" class="compass" data-action="reset-compass">
+                N
+              </button>
+              <span class="heading" id="heading-readout">Heading 000</span>
+
+              <div class="minimap" id="minimap" aria-label="Minimap">
+                <canvas
+                  id="minimap-canvas"
+                  width="146"
+                  height="146"
+                  aria-hidden="true"
+                ></canvas>
+                <span
+                  class="map-dot player"
+                  id="map-player-dot"
+                  aria-hidden="true"
+                ></span>
+                <span
+                  class="map-dot target"
+                  id="map-target-dot"
+                  aria-hidden="true"
+                ></span>
+              </div>
+
+              <button
+                type="button"
+                class="orb hp"
+                id="orb-hp"
+                data-action="orb-hp"
+              >
+                <span class="orb-fill"></span>
+                <span class="orb-label">HP</span>
+                <span class="orb-value" id="orb-hp-value">99</span>
+              </button>
+
+              <button
+                type="button"
+                class="orb prayer"
+                id="orb-prayer"
+                data-action="toggle-quick-prayer"
+              >
+                <span class="orb-fill"></span>
+                <span class="orb-label">PR</span>
+                <span class="orb-value" id="orb-prayer-value">99</span>
+              </button>
+
+              <button
+                type="button"
+                class="orb run"
+                id="orb-run"
+                data-action="toggle-run"
+              >
+                <span class="orb-fill"></span>
+                <span class="orb-label">RN</span>
+                <span class="orb-value" id="orb-run-value">100</span>
+              </button>
+
+              <button
+                type="button"
+                class="orb spec"
+                id="orb-spec"
+                data-action="use-special"
+              >
+                <span class="orb-fill"></span>
+                <span class="orb-label">SP</span>
+                <span class="orb-value" id="orb-spec-value">100</span>
+              </button>
+
+              <div class="minimap-tools">
+                <button type="button" data-action="open-activity-adviser">
+                  Adviser
+                </button>
+                <button type="button" data-action="open-world-map">Map</button>
+                <button type="button" data-action="open-wiki-lookup">
+                  Wiki
+                </button>
+              </div>
+            </section>
+
+            <section
+              class="tab-row top"
+              id="top-tabs"
+              role="tablist"
+              aria-label="Top tabs"
+            ></section>
+
+            <section class="panel-wrap">
+              <header class="panel-header">
+                <h2 id="panel-title">Inventory</h2>
+                <span id="panel-subtitle">Top Panel</span>
+              </header>
+              <div
+                class="panel-content"
+                id="panel-content"
+                aria-live="polite"
+              ></div>
+            </section>
+
+            <section
+              class="tab-row bottom"
+              id="bottom-tabs"
+              role="tablist"
+              aria-label="Bottom tabs"
+            ></section>
+          </aside>
+
+          <div class="context-menu hidden" id="context-menu"></div>
+        </div>
+      </div>
+    </main>
+
+    <div class="toast-rack" id="toast-rack" aria-live="assertive"></div>
+
+    <script
+      type="module"
+      src="src/scripts/bootstrap.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "functional": {
+    "behavior": ["actions", "behaviors", "interactions", "events", "triggers", "states", "transitions"],
+    "logic": ["algorithms", "conditions", "rules", "heuristics", "procedures", "methods", "functions"],
+    "workflow": ["pipelines", "processes", "tasks", "jobs", "operations", "automations"]
+  },
+  "architecture": {
+    "structure": ["modules", "components", "subsystems", "layers", "engines", "frameworks"],
+    "runtime": ["instances", "sessions", "contexts", "lifecycles"],
+    "integration": ["adapters", "connectors", "services", "endpoints", "routes", "protocols"]
+  },
+  "ui_ux": {
+    "containers": ["windows", "panels", "dialogs", "menus", "tabs", "overlays"],
+    "controls": ["buttons", "sliders", "checkboxes", "inputs", "selectors", "toggles"],
+    "feedback": ["tooltips", "notifications", "alerts", "status_indicators"],
+    "visual": ["icons", "textures", "sprites", "animations", "shaders", "effects"]
+  },
+  "game_mechanics": {
+    "systems": ["combat", "crafting", "inventory", "progression", "quests"],
+    "entities": ["items", "objects", "characters", "spawners"],
+    "stats": ["attributes", "parameters", "variables", "cooldowns", "timers"]
+  },
+  "data": {
+    "structures": ["records", "fields", "tables", "arrays", "maps", "objects"],
+    "assets": ["resources", "bundles", "documents", "archives"],
+    "metadata": ["tags", "labels", "identifiers"]
+  },
+  "configuration": {
+    "settings": ["options", "preferences", "profiles", "presets"],
+    "controls": ["flags", "switches", "thresholds", "limits"]
+  },
+  "devops": {
+    "build": ["artifacts", "packages", "versions", "migrations"],
+    "deploy": ["releases", "rollbacks", "updates"],
+    "diagnostics": ["logs", "traces", "metrics", "health_checks"]
+  }
+}
