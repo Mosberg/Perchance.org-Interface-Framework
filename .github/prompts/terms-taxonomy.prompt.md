@@ -1,6 +1,9 @@
 ---
 name: universal‑systems‑taxonomy
 description: A master prompt for generating, classifying, expanding, or transforming concepts across Game Design, UI/UX, and Agent Architecture domains. Ideal for system design, worldbuilding, pipelines, and modular frameworks.
+tools: [vscode, execute, read, agent, edit, search, web, browser, vscode.mermaid-chat-features/renderMermaidDiagram, todo]
+model: GPT-5.3-Codex (copilot)
+agent: Perchance
 ---
 
 <!-- Tip: Use /create-prompt in chat to generate content with agent assistance -->
