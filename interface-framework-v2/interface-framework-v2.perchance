@@ -7,9 +7,9 @@ $meta
 interfaceFrameworkV2
   version = 2.0.0
   theme = osrs-universal
-  scriptUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/scripts/framework.js
-  presetsScriptUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/scripts/adapters/presets.js
-  styleUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/styles/osrs-universal.css
+  scriptUrl = https://user.uploads.dev/file/f7653c07d4e072a6c03e962839aed9c7.js
+  presetsScriptUrl = https://user.uploads.dev/file/27b727de65184eb0c12c6df62195627b.js
+  styleUrl = https://user.uploads.dev/file/3cf9f6eb8bf4be1ce164a73349101e16.css
   docsUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/src/docs/PLUGIN-USAGE.md
   demoUrl = https://raw.githubusercontent.com/Mosberg/Perchance.org-Interface-Framework/refs/heads/main/interface-framework-v2/index.html
   mountId = ifw2-root

@@ -8,6 +8,7 @@ superFetch = {import:super-fetch-plugin} // <-- to bypass CORs issues in charact
 fullscreenButtonPlugin = {import:fullscreen-button-plugin}
 combineEmojis = {import:combine-emojis-plugin}
 bugReport = {import:bug-report-plugin} // for comments-plugin-based feedback button - it's a helper for getting browser debug info like browser version, localStorage size limits, etc. - stuff that's relevant to bug reports
+interfaceFrameworkV2 = {import:interface-framework-v2} // optional preset bridge; enable with ?ifw2=1 or localStorage "ifw2-enabled" = "1"
 
 // HEADS UP:
 // All the code you see here and in the bottom-right editor is what "powers" this chat app thing.

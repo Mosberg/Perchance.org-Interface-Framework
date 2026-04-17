@@ -9,6 +9,7 @@ combineEmojis = {import:combine-emojis-plugin} // simple helper for layering mul
 prompt2 = {import:prompt2-plugin} // for "modal" popup, used for the shortcuts feature
 bugReport = {import:bug-report-plugin} // for comments-plugin-based feedback button - it's a helper for getting browser debug info like browser version, localStorage size limits, etc. - stuff that's relevant to bug reports
 createTextEditor = {import:text-editor-plugin-v1} // a higher-performance version of <textarea> that also supports text styling (e.g. text within asterisks can be italicized)
+interfaceFrameworkV2 = {import:interface-framework-v2} // optional preset bridge; enable with ?ifw2=1 or localStorage "ifw2-enabled" = "1"
 
 $meta // this is the stuff that appears in search engines, social media preview cards, browser tab title, etc.
   title = 🗡️ AI RPG - Text Adventure - free, unlimited, no sign-up

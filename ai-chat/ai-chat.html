@@ -2,6 +2,114 @@
 <!-- <p style="font-size:80%;">[page.subtitle]</p> -->
 <script>window.pageLoadStartTime=Date.now();</script>
 <script>window.onForcedColorSchemeChangeHandlers = new Set();</script>
+<script>
+  (function setupIfw2PresetBridge() {
+    var shouldEnable = /(?:\?|&)ifw2=1(?:&|$)/.test(window.location.search);
+    try {
+      shouldEnable =
+        shouldEnable || window.localStorage.getItem("ifw2-enabled") === "1";
+    } catch (error) {
+      console.warn("[IFW2] localStorage unavailable:", error);
+    }
+
+    if (!shouldEnable) {
+      return;
+    }
+
+    function ensureStyle(url) {
+      if (!url || document.querySelector('link[data-ifw2-style="' + url + '"]')) {
+        return;
+      }
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = url;
+      link.setAttribute("data-ifw2-style", url);
+      document.head.appendChild(link);
+    }
+
+    function loadScript(url) {
+      return new Promise(function (resolve, reject) {
+        if (!url) {
+          resolve();
+          return;
+        }
+        if (document.querySelector('script[data-ifw2-script="' + url + '"]')) {
+          resolve();
+          return;
+        }
+        var script = document.createElement("script");
+        script.src = url;
+        script.async = true;
+        script.setAttribute("data-ifw2-script", url);
+        script.onload = function () {
+          resolve();
+        };
+        script.onerror = function () {
+          reject(new Error("Failed to load " + url));
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    function mountRuntime() {
+      if (
+        typeof window.createInterfaceFrameworkV2 !== "function" ||
+        !window.interfaceFrameworkV2Presets ||
+        typeof window.interfaceFrameworkV2Presets.createPresetForLink !== "function"
+      ) {
+        console.error("[IFW2] Preset runtime is unavailable.");
+        return;
+      }
+
+      var mountId = "ifw2-ai-chat-root";
+      var mountEl = document.getElementById(mountId);
+      if (!mountEl) {
+        mountEl = document.createElement("div");
+        mountEl.id = mountId;
+        document.body.appendChild(mountEl);
+      }
+
+      mountEl.style.cssText =
+        "position:fixed; inset:8px; z-index:2147483000; background:rgba(13,10,8,0.92);";
+
+      var adapter = window.interfaceFrameworkV2Presets.createPresetForLink(
+        "https://perchance.org/ai-chat"
+      );
+
+      window.ifw2 = window.createInterfaceFrameworkV2({
+        mount: "#" + mountId,
+        mode: "universal",
+        title: "AI Chat",
+        subtitle: "Preset bridge active",
+        adapter: adapter
+      });
+
+      window.ifw2.setData(
+        {
+          status: "Preset bridge active",
+          sourceUrl: "https://perchance.org/ai-chat"
+        },
+        "preset-bridge-init"
+      );
+    }
+
+    ensureStyle("[interfaceFrameworkV2.styleUrl]");
+    loadScript("[interfaceFrameworkV2.scriptUrl]")
+      .then(function () {
+        return loadScript("[interfaceFrameworkV2.presetsScriptUrl]");
+      })
+      .then(function () {
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", mountRuntime, { once: true });
+        } else {
+          mountRuntime();
+        }
+      })
+      .catch(function (error) {
+        console.error("[IFW2] Failed to initialize preset bridge.", error);
+      });
+  })();
+</script>
 <style>
   #quickReplyButtonsCtn button { padding: 2px; }
   #generateCharactersAndScenarioBtn { padding: 3px; }

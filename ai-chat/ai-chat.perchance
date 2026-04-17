@@ -6,6 +6,7 @@ fullscreenButton = {import:fullscreen-button-plugin}
 literal = {import:literal-plugin} // this plugin allows people to use square/curly brackets (which are usually special characters in perchance) in their bot/user names, writing instructions, etc. without causing errors
 bugReport = {import:bug-report-plugin} // for comments-plugin-based feedback button - it's a helper for getting browser debug info like browser version, localStorage size limits, etc. - stuff that's relevant to bug reports
 createTextEditor = {import:text-editor-plugin-v1} // a higher-performance version of <textarea> that also supports text styling (e.g. text within asterisks can be italicized)
+interfaceFrameworkV2 = {import:interface-framework-v2} // optional preset bridge; enable with ?ifw2=1 or localStorage "ifw2-enabled" = "1"
 
 botName = [botNameEl.value.trim() || "Bot"]
 userName = [userNameEl.value.trim() || "Anon"]
